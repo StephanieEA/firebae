@@ -1,12 +1,12 @@
-$wtf: #ff0080;
+$wtf: white;
 $ridiculous: cursive;
 
 body {
   background: $wtf;
 }
 
-.hello-world {
-  font-family: $ridiculous;
+header {
+  background: #52de9d;
 }
 
 #new-message--content {
