@@ -52,5 +52,9 @@
     "style-loader": "^0.13.1",
     "webpack": "^1.13.2",
     "webpack-dev-server": "^1.15.2"
+  },
+  "dependencies": {
+    "babel-register": "^6.18.0",
+    "jsdom": "^9.9.1"
   }
 }

@@ -6,11 +6,12 @@ require('babel-polyfill');
 
 global.document = require('jsdom').jsdom(`
   <head>
-    <meta charset='UTF-8'>
-    <title>Shoot The Breeze</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Dylbekanie</title>
   </head>
   <body>
-    <div id='application'></div>
+    <div id="application"></div>
+    <script src="main.bundle.js"></script>
   </body>
 `);
 
