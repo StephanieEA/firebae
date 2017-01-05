@@ -1,16 +1,15 @@
-$wtf: white;
-$ridiculous: cursive;
+$backgroundColor: #7BD8B0;
+$textImageColor: #353534;
 
 body {
-  background: $wtf;
+  background: $backgroundColor;
 }
 
 header, footer {
-  background: #52de9d;
+  background: $backgroundColor;
   height: 10vh;
   position: fixed;
-  width: 75%;
-  left: 12.5%;
+  width: 100%;
 }
 
 header {
@@ -22,19 +21,22 @@ footer {
 }
 
 h1 {
-  font-size: 2.5em;
+  font-size: 2em;
   text-align: center;
 }
 
 
 button {
-  background: #507D2A;
+  background: $backgroundColor;
   border: none;
+  border-radius: 25px;
   color: white;
   width: 50vw;
 }
 
-td { padding: 5px; }
+td { padding: 5px;
+     color: $textImageColor;
+}
 
 .welcome {
   position: absolute;
@@ -50,6 +52,7 @@ td { padding: 5px; }
 
 .login-container, .account-setup {
   background: lightgrey;
+  background: url('/lib/images/moneystack.svg');
   height: 80vh;
   margin: 10vh 0px;
   text-align: center;
@@ -89,7 +92,7 @@ td { padding: 5px; }
 }
 
 .submit-btn {
-  background: blue;
+  background: $textImageColor;
   font-size: 1em;
   height: 30px;
   width: 150px;
