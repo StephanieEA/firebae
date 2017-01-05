@@ -7,7 +7,7 @@
     "test": "test"
   },
   "scripts": {
-    "start": "webpack-dev-server --devtool",
+    "start": "webpack-dev-server --devtool --history-api-fallback",
     "build": "webpack",
     "test": "mocha --compilers js:babel-register --require test/helpers/setup.js --recursive"
   },
@@ -55,6 +55,7 @@
   },
   "dependencies": {
     "babel-register": "^6.18.0",
-    "jsdom": "^9.9.1"
+    "jsdom": "^9.9.1",
+    "react-router": "^3.0.0"
   }
 }
