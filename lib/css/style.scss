@@ -1,19 +1,17 @@
-$backgroundColor: #7BD8B0;
-$textImageColor: #353534;
-
-body {
-  background: $backgroundColor;
-}
+@import 'variables';
 
 header, footer {
   background: $backgroundColor;
   height: 10vh;
   position: fixed;
   width: 100%;
+  text-align: center;
 }
 
 header {
+  display: inline-block;
   top: 0;
+  padding-bottom: 1vh;
 }
 
 footer {
@@ -21,6 +19,7 @@ footer {
 }
 
 h1 {
+  display: inline-block;
   font-size: 2em;
   text-align: center;
 }
@@ -32,6 +31,7 @@ button {
   border-radius: 25px;
   color: white;
   width: 50vw;
+  height: 5vh;
 }
 
 td { padding: 5px;
@@ -45,16 +45,15 @@ td { padding: 5px;
   font-size: .9em;
 }
 
-<<<<<<< HEAD
 .right-side, .account-setup {
   padding: 10vh 10vw 2vh;
   text-align: center;
 }
 
 .login-container, .account-setup {
-  background: lightgrey;
   background: url('/lib/images/moneystack.svg');
-  height: 80vh;
+  background: lightgrey;
+  height: 100vh;
   margin: 10vh 0px;
   text-align: center;
 }
@@ -63,11 +62,8 @@ td { padding: 5px;
   padding: 0 10px 80px;
 }
 
-
 .login-btn, {
-  margin-top: 50%;
-  margin-bottom: 10px;
-  border-radius: 25px;
+  margin: 25% 0;
 }
 
 .setup-table {
@@ -97,4 +93,36 @@ td { padding: 5px;
   font-size: 1em;
   height: 30px;
   width: 150px;
+}
+
+.header-title, .logo {
+  display: inline-block;
+}
+
+.logo {
+  width: 50px;
+  height: 50px;
+}
+
+.splash {
+  display: inline-block;
+  padding-bottom: 5vh;
+}
+
+@mixin img($size, $margin){
+  height: $size;
+  width: $size;
+  margin: $margin;
+}
+
+.splash img {
+  @include img(20vw, 1vh);
+}
+
+.loginh2 {
+  padding: 5vh 0 10vh;
+}
+
+.next-one {
+  margin: 25%;
 }
