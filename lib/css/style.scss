@@ -1,21 +1,17 @@
-$wtf: white;
-$ridiculous: cursive;
-
-body {
-  background: $wtf;
-}
+@import 'variables';
 
 header, footer {
-  background: #52de9d;
+  background: $backgroundColor;
   height: 10vh;
-  padding: 10px 10px 5px;
   position: fixed;
-  width: 75%;
-  left: 9%;
+  width: 100%;
+  text-align: center;
 }
 
 header {
+  display: inline-block;
   top: 0;
+  padding-bottom: 1vh;
 }
 
 footer {
@@ -23,27 +19,42 @@ footer {
 }
 
 h1 {
-  font-size: 40px;
+  display: inline-block;
+  font-size: 2em;
   text-align: center;
 }
 
 
 button {
-  background: #507D2A;
+  background: $backgroundColor;
   border: none;
+  border-radius: 25px;
   color: white;
-  width: 200px;
+  width: 50vw;
+  height: 5vh;
 }
 
-td { padding: 5px; }
+td { padding: 5px;
+     color: $textImageColor;
+}
 
 .welcome {
   position: absolute;
-  bottom: 2px;
+  bottom: .25em;
+  left: .5em;
+  font-size: .9em;
 }
 
-.right-side, .account-setup, .next-one {
-  padding: 80px 10px 0px;
+.right-side, .account-setup {
+  padding: 10vh 10vw 2vh;
+  text-align: center;
+}
+
+.login-container, .account-setup {
+  background: url('/lib/images/moneystack.svg');
+  background: lightgrey;
+  height: 100vh;
+  margin: 10vh 0px;
   text-align: center;
 }
 
@@ -51,37 +62,21 @@ td { padding: 5px; }
   padding: 0 10px 80px;
 }
 
-.login-container {
-  background: lightgrey;
-  height: 75vh;
-  margin: 80px 0px;
-  text-align: center;
-  width: 100%;
-}
-
 .login-btn, {
-  margin-top: 50%;
-  margin-bottom: 10px;
-  border-radius: 25px;
-}
-.account-setup {
-  background: lightgrey;
-  height: 62vh;
-  margin: 80px 0px;
+  margin: 25% 0;
 }
 
 .setup-table {
   background: grey;
+  font-size: 1em;
   margin: 20% auto 5%;
-  font-size: 12px;
   text-align: left;
 }
 
 .table-btn{
   background: red;
-  width: 20px;
-  height: 10px;
-  font-size: 12px;
+  height: 1vh;
+  width: 2vw;
 }
 
 .tdQuest {
@@ -94,8 +89,44 @@ td { padding: 5px; }
 }
 
 .submit-btn {
-  background: blue;
-  color: white;
-  width: 150px;
+  background: $textImageColor;
+  font-size: 1em;
   height: 30px;
+  width: 150px;
+}
+
+.header-title, .logo {
+  display: inline-block;
+}
+
+.logo {
+  width: 50px;
+  height: 50px;
+}
+
+.splash {
+  display: inline-block;
+  padding-bottom: 5vh;
+}
+
+@mixin img($size, $margin){
+  height: $size;
+  width: $size;
+  margin: $margin;
+}
+
+.splash img {
+  @include img(20vw, 1vh);
+}
+
+.loginh2 {
+  padding: 5vh 0 10vh;
+}
+
+.next-one {
+  margin: 25%;
+}
+
+input {
+  width: 200px;
 }
