@@ -24,7 +24,6 @@ h1 {
   text-align: center;
 }
 
-
 button {
   background: $backgroundColor;
   border: none;
@@ -32,6 +31,10 @@ button {
   color: white;
   width: 50vw;
   height: 5vh;
+}
+
+input {
+  width: 200px;
 }
 
 td { padding: 5px;
@@ -51,8 +54,9 @@ td { padding: 5px;
 }
 
 .login-container, .account-setup {
-  background: url('/lib/images/moneystack.svg');
   background: lightgrey;
+  background: url('/lib/images/moneybackground.svg');
+  background-position: center;
   height: 100vh;
   margin: 10vh 0px;
   text-align: center;
@@ -97,11 +101,16 @@ td { padding: 5px;
 
 .header-title, .logo {
   display: inline-block;
+  padding: 2vh;
 }
 
 .logo {
-  width: 50px;
-  height: 50px;
+  width: 25vw;
+  height: 25vh;
+  overflow: hidden;
+  position: fixed;
+  left: -10vw;
+  top: -10vh;
 }
 
 .splash {
@@ -125,8 +134,4 @@ td { padding: 5px;
 
 .next-one {
   margin: 25%;
-}
-
-input {
-  width: 200px;
 }
