@@ -1,60 +1,92 @@
 @import 'variables';
+@import 'mixins';
 
-header, footer {
-  background: $backgroundColor;
-  height: 10vh;
-  position: fixed;
-  width: 100%;
-  text-align: center;
+
+body {
+  background: url('/lib/images/moneybackground.svg');
 }
 
 header {
-  display: inline-block;
-  top: 0;
-  padding-bottom: 1vh;
+  background: $backgroundColor;
+  position: fixed;
+  text-align: center;
+  width: 100%;
 }
 
-footer {
-  bottom: 0;
+header {
+  font-family: $nicefont;
+  display: inline-block;
+  height: 16vh;
+  padding-bottom: 1vh;
+  top: 0;
 }
+
+.header-title {
+  display: inline-block;
+}
+
+// footer {
+//   bottom: 0;
+//   height: 10vh;
+//   font-family: $nicefont;
+// }
 
 h1 {
-  display: inline-block;
-  font-size: 2em;
+  font-size: 3em;
   text-align: center;
 }
 
+h2, h3 {
+  font-family: $nicefont;
+  font-size: 1.5em;
+  text-align: center;
+  padding: 45px 0;
+}
+h2, {
+  padding: 75px 0 40px 0;
+}
+
+
+.login-pic, .information-pic, .moneystack-pic {
+  display: inline-block;
+}
+
+.login-pic-text, .information-pic-text, .moneystack-pic-text, .random-message {
+  font-family: $nicefont;
+}
+
+.random-message {
+  margin-top: 20px;
+}
+
+
 button {
-  background: $backgroundColor;
-  border: none;
-  border-radius: 25px;
-  color: white;
-  width: 50vw;
-  height: 5vh;
+  @include button($backgroundColor);
 }
 
 input {
   width: 200px;
 }
 
-td { padding: 5px;
-     color: $textImageColor;
+td {
+  color: $textImageColor;
+  font-family: $nicefont;
+  padding: 5px;
 }
 
 .welcome {
-  position: absolute;
   bottom: .25em;
+  font-size: .3em;
   left: .5em;
-  font-size: .9em;
+  position: absolute;
 }
 
 .right-side, .account-setup {
-  padding: 12vh 10vw 2vh;
+  padding: 10vh 10vw 2vh;
   text-align: center;
 }
 
 .login-container, .account-setup {
-  background: url('/lib/images/moneybackground.svg');
   background-position: center;
   height: 100vh;
   margin: 10vh 0px;
@@ -93,43 +125,33 @@ td { padding: 5px;
 
 .submit-btn {
   background: $textImageColor;
-  font-size: 1em;
   height: 30px;
+  font-size: 1em;
+  font-family: $nicefont;
   width: 150px;
 }
 
-.header-title, .logo {
-  display: inline-block;
-  padding: 2vh;
-}
-
 .logo {
-  width: 25vw;
-  height: 25vh;
-  overflow: hidden;
-  position: fixed;
-  left: -10vw;
-  top: -10vh;
+
 }
 
 .splash {
-  display: inline-block;
-  padding-bottom: 5vh;
+  background-color: $opaqueBackgroundColor;
+  padding-bottom: 20px;
 }
 
-@mixin img($size, $margin){
+@mixin img($size, $margin, $display, $padding){
   height: $size;
   width: $size;
   margin: $margin;
+  display: $display;
+  padding: $padding;
 }
 
 .splash img {
-  @include img(20vw, 1vh);
+  @include img(15vw, 1vh, inline-block, 20px 50px);
 }
 
-.loginh2 {
-  padding: 5vh 0 10vh;
-}
 
 .next-one {
   margin: 25%;
