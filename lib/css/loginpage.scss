@@ -1,10 +1,13 @@
+@import 'mediaquery';
+
 h2, h3 {
   font-family: $nicefont;
   font-size: 1.5em;
   text-align: center;
   padding: 45px 0;
 }
-h2, {
+
+h2 {
   padding: 75px 0 40px 0;
 }
 
@@ -20,8 +23,8 @@ h2, {
   margin-top: 20px;
 }
 
-button {
-  @include button($backgroundColor);
+.login-btn {
+  @include button($backgroundColor, $backgroundColorHover);
 }
 
 .splash {
