@@ -1,0 +1,30 @@
+
+header {
+  background: $backgroundColor;
+  position: fixed;
+  text-align: center;
+  width: 100%;
+}
+
+header {
+  font-family: $nicefont;
+  display: inline-block;
+  height: 16vh;
+  padding-bottom: 1vh;
+  top: 0;
+}
+
+.header-title {
+  display: inline-block;
+}
+
+// footer {
+//   bottom: 0;
+//   height: 10vh;
+//   font-family: $nicefont;
+// }
+
+h1 {
+  font-size: 3em;
+  text-align: center;
+}

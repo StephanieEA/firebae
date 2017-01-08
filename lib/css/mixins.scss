@@ -1,8 +1,19 @@
 @mixin button($color) {
-  background: $color;
+  background-color: $color;
   border: none;
   border-radius: 25px;
   color: white;
   height: 6vh;
   width: 25vw;
+    &:hover {
+      background-color: #469070;
+    }
+}
+
+@mixin img($size, $margin, $display, $padding){
+  height: $size;
+  width: $size;
+  margin: $margin;
+  display: $display;
+  padding: $padding;
 }

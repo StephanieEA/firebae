@@ -1,84 +1,11 @@
 @import 'variables';
 @import 'mixins';
-
+@import 'header';
+@import 'loginpage';
+@import 'accountsetuppage';
 
 body {
   background: url('/lib/images/moneybackground.svg');
-}
-
-header {
-  background: $backgroundColor;
-  position: fixed;
-  text-align: center;
-  width: 100%;
-}
-
-header {
-  font-family: $nicefont;
-  display: inline-block;
-  height: 16vh;
-  padding-bottom: 1vh;
-  top: 0;
-}
-
-.header-title {
-  display: inline-block;
-}
-
-// footer {
-//   bottom: 0;
-//   height: 10vh;
-//   font-family: $nicefont;
-// }
-
-h1 {
-  font-size: 3em;
-  text-align: center;
-}
-
-h2, h3 {
-  font-family: $nicefont;
-  font-size: 1.5em;
-  text-align: center;
-  padding: 45px 0;
-}
-h2, {
-  padding: 75px 0 40px 0;
-}
-
-
-.login-pic, .information-pic, .moneystack-pic {
-  display: inline-block;
-}
-
-.login-pic-text, .information-pic-text, .moneystack-pic-text, .random-message {
-  font-family: $nicefont;
-}
-
-.random-message {
-  margin-top: 20px;
-}
-
-
-button {
-  @include button($backgroundColor);
-}
-
-input {
-  width: 200px;
-}
-
-td {
-  color: $textImageColor;
-  font-family: $nicefont;
-  padding: 5px;
-}
-
-.welcome {
-  bottom: .25em;
-  font-size: .3em;
-  left: .5em;
-  position: absolute;
 }
 
 .right-side, .account-setup {
@@ -97,62 +24,6 @@ td {
   padding: 0 10px 80px;
 }
 
-.login-btn, {
-  margin: 25% 0;
-}
-
-.setup-table {
-  background: grey;
-  font-size: 1em;
-  margin: 20% auto 5%;
-  text-align: left;
-}
-
-.table-btn{
-  background: red;
-  height: 1vh;
-  width: 2vw;
-}
-
-.tdQuest {
-  padding-left: 5px;
-}
-
-.tdInput {
-  height: 7px;
-  width: 40px;
-}
-
-.submit-btn {
-  background: $textImageColor;
-  height: 30px;
-  font-size: 1em;
-  font-family: $nicefont;
-  width: 150px;
-}
-
-.logo {
-
-}
-
-.splash {
-  background-color: $opaqueBackgroundColor;
-  padding-bottom: 20px;
-}
-
-@mixin img($size, $margin, $display, $padding){
-  height: $size;
-  width: $size;
-  margin: $margin;
-  display: $display;
-  padding: $padding;
-}
-
-.splash img {
-  @include img(15vw, 1vh, inline-block, 20px 50px);
-}
-
-
-.next-one {
-  margin: 25%;
-}
+// .login-btn, {
+//   margin: 25% 0;
+// }
