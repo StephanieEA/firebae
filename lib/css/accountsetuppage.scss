@@ -1,0 +1,55 @@
+.welcome {
+  bottom: .25em;
+  font-size: .3em;
+  left: .5em;
+  position: absolute;
+}
+
+.setup-table {
+  background: grey;
+  font-size: 1em;
+  margin: 20% auto 5%;
+  text-align: left;
+}
+
+input {
+  width: 200px;
+}
+
+td {
+  color: $textImageColor;
+  font-family: $nicefont;
+  padding: 5px;
+}
+
+
+.table-btn{
+  background: red;
+  height: 1vh;
+  width: 2vw;
+}
+
+.tdQuest {
+  padding-left: 5px;
+}
+
+.tdInput {
+  height: 7px;
+  width: 40px;
+}
+
+
+// button {
+//   @include button($textImageColor);
+// }
+.submit-btn {
+  background: $textImageColor;
+  height: 30px;
+  font-size: 1em;
+  font-family: $nicefont;
+  width: 150px;
+}
+
+.next-one {
+  margin: 25%;
+}
