@@ -1,0 +1,34 @@
+h2, h3 {
+  font-family: $nicefont;
+  font-size: 1.5em;
+  text-align: center;
+  padding: 45px 0;
+}
+h2, {
+  padding: 75px 0 40px 0;
+}
+
+.login-pic, .information-pic, .moneystack-pic {
+  display: inline-block;
+}
+
+.login-pic-text, .information-pic-text, .moneystack-pic-text, .random-message {
+  font-family: $nicefont;
+}
+
+.random-message {
+  margin-top: 20px;
+}
+
+button {
+  @include button($backgroundColor);
+}
+
+.splash {
+  background-color: $opaqueBackgroundColor;
+  padding-bottom: 20px;
+}
+
+.splash img {
+  @include img(15vw, 1vh, inline-block, 20px 50px);
+}

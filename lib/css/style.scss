@@ -1,60 +1,19 @@
 @import 'variables';
+@import 'mixins';
+@import 'header';
+@import 'loginpage';
+@import 'accountsetuppage';
 
-header, footer {
-  background: $backgroundColor;
-  height: 10vh;
-  position: fixed;
-  width: 100%;
-  text-align: center;
-}
-
-header {
-  display: inline-block;
-  top: 0;
-  padding-bottom: 1vh;
-}
-
-footer {
-  bottom: 0;
-}
-
-h1 {
-  display: inline-block;
-  font-size: 2em;
-  text-align: center;
-}
-
-button {
-  background: $backgroundColor;
-  border: none;
-  border-radius: 25px;
-  color: white;
-  width: 50vw;
-  height: 5vh;
-}
-
-input {
-  width: 200px;
-}
-
-td { padding: 5px;
-     color: $textImageColor;
-}
-
-.welcome {
-  position: absolute;
-  bottom: .25em;
-  left: .5em;
-  font-size: .9em;
+body {
+  background: url('/lib/images/moneybackground.svg');
 }
 
 .right-side, .account-setup {
-  padding: 12vh 10vw 2vh;
+  padding: 10vh 10vw 2vh;
   text-align: center;
 }
 
 .login-container, .account-setup {
-  background: url('/lib/images/moneybackground.svg');
   background-position: center;
   height: 100vh;
   margin: 10vh 0px;
