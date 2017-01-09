@@ -1,17 +1,13 @@
-
 header {
   background: $backgroundColor;
-  position: fixed;
-  text-align: center;
-  width: 100%;
-}
-
-header {
-  font-family: $nicefont;
   display: inline-block;
+  font-family: $nicefont;
   height: 16vh;
   padding-bottom: 1vh;
+  position: fixed;
+  text-align: center;
   top: 0;
+  width: 100%;
 }
 
 .header-title {
