@@ -7,7 +7,7 @@ import Application from '../lib/components/Application';
 
 describe('Application', () => {
   it.skip('renders as a <div>', () => {
-    const wrapper = render(<Application />)
+    const wrapper = shallow(<Application />)
     assert.equal(wrapper.type(), 'div');
   });
 });
