@@ -12,11 +12,18 @@
   margin: 0 auto;
   margin-top: -100px;
 }
+.burns-sign-2 {
+  background: url('/lib/images/burnsfinish.svg') no-repeat;
+  height: 504px;
+  width: 210px;
+  margin: 0 auto;
+  margin-top: 20px;
+}
 
 .setup-table {
-  background: grey;
+  background: $backgroundColor;
   font-size: 1em;
-  margin: 20% auto 5%;
+  margin: 6% auto 5%;
   text-align: left;
 }
 
@@ -44,6 +51,10 @@ td {
 .tdInput {
   height: 7px;
   width: 40px;
+}
+
+.instruction-acc-setup {
+  margin-bottom: 20px;
 }
 
 
