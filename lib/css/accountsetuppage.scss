@@ -40,7 +40,7 @@ td {
 
 
 .submit-btn {
-  @include button($textImageColor);
+  @include button($textImageColor, $black);
 }
 
 
