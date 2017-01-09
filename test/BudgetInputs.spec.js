@@ -11,4 +11,15 @@ describe('BudgetInputs', () => {
     assert.equal(wrapper.type(), 'tr');
   });
 
+  it('has a 3 td children', () => {
+    const wrapper = shallow(<BudgetInputs />);
+    expect(wrapper.find('td')).to.have.length(3);
+  })
+
+  it('has a td input with a placeholder rent', () => {
+    const wrapper = shallow(<BudgetInputs />);
+    const 
+    expect(wrapper.find('td')).to.have.length(3);
+  })
+
 });

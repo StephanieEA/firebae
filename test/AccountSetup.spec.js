@@ -36,8 +36,8 @@ describe('AccountSetup', () => {
 
   it('should render a submit button', () => {
     const wrapper = shallow(<AccountSetup />)
-    console.log(wrapper.debug())
     const submitButton = wrapper.find('.submit-btn');
     expect(submitButton.props().text).to.equal('Submit');
   });
+
 });
