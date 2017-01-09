@@ -42,13 +42,7 @@ td {
 .submit-btn {
   @include button($textImageColor);
 }
-// .submit-btn {
-//   background: $textImageColor;
-//   height: 30px;
-//   font-size: 1em;
-//   font-family: $nicefont;
-//   width: 150px;
-// }
+
 
 .next-one {
   margin: 25%;

@@ -1,4 +1,4 @@
-@mixin button($color) {
+@mixin button($color, $hovercolor) {
   background-color: $color;
   border: none;
   border-radius: 25px;
@@ -6,7 +6,7 @@
   height: 6vh;
   width: 25vw;
     &:hover {
-      background-color: #469070;
+      background-color: $hovercolor;
     }
 }
 
