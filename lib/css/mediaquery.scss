@@ -1,0 +1,21 @@
+@media (max-width: 450px) {
+
+  header {
+    height: 20vh;
+  }
+  .header-title {
+    font-size: 2.5em;
+    display: inline-block;
+    margin-top: -100px;
+    margin-left: 50px;
+  }
+
+  .logo {
+    float:left;
+    margin-left: 15px;
+  }
+
+  .random-message {
+    margin-bottom: 20px;
+  }
+}
