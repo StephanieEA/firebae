@@ -1,7 +1,7 @@
 {
-  "name": "Dylbekanie",
+  "name": "Excellent Budgeting",
   "version": "1.0.0",
-  "description": "Dylbekanie- A Budgeting App",
+  "description": "Excellent Budgeting- A Budgeting App",
   "main": "index.js",
   "directories": {
     "test": "test"
