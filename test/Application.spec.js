@@ -55,10 +55,4 @@ describe('Application', () => {
     const wrapper = shallow(<Application />)
     expect(wrapper.state().draftMonthly).to.deep.equal('')
   })
-
-  it('calls componentDidMount', () => {
-    sinon.spy(Application.prototype, 'componentDidMount');
-    const wrapper = mount(<Application />);
-    expect(Application.prototype.componentDidMount.calledOnce).to.equal(true);
-  });
 });

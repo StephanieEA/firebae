@@ -6,12 +6,12 @@ import { assert, expect } from 'chai';
 import BudgetInputs from '../lib/components/BudgetInputs';
 
 describe('BudgetInputs', () => {
-  it('renders as a <section>', () => {
+  it('renders as a <div>', () => {
     const wrapper = shallow(<BudgetInputs />)
-    assert.equal(wrapper.type(), 'tr');
+    assert.equal(wrapper.type(), 'div');
   });
 
-  it('has a 2 td children', () => {
+  it('has 2 td children', () => {
     const wrapper = shallow(<BudgetInputs />);
     expect(wrapper.find('td')).to.have.length(2);
   })

@@ -23,10 +23,9 @@ describe('Header', () => {
     expect(wrapper.find('p').text()).to.equal('')
   })
 
-  it('if there is a user the welcome message will render', () =>{
+  it('if there is a user the welcome message will render', () => {
     const user = true
     const wrapper = shallow(<Header user={user}/>)
     expect(wrapper.find('p').text()).to.equal('Welcome, ')
   })
-
 });
