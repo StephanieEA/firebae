@@ -39,6 +39,4 @@ describe('BudgetIncome', () => {
     inputWrapper.simulate('change', event2);
     assert.equal(onChange.calledTwice, true);
   });
-
-
 });

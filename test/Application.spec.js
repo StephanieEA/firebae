@@ -7,14 +7,14 @@ import sinon from 'sinon';
 import Application from '../lib/components/Application';
 
 describe('Application', () => {
-  it.skip('renders as a <div>', () => {
+  it.skip('should be titled "excellent budgeting"', () => {
     const wrapper = shallow(<Application />);
     assert.equal(wrapper.type(), 'BrowserRouter');
   });
 
-  it.skip('renders a BrowserRouter', () => {
-    const wrapper = shallow(<Application />);
-    expect(wrapper.find('BrowserRouter')).to.have.length(1);
+  it('renders an Application', () => {
+    const wrapper = mount(<Application />);
+    expect(wrapper.find('Application')).to.have.length(1);
   });
 
   it('renders a div with classname .application', () => {
