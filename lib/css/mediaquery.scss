@@ -16,9 +16,12 @@
   }
 
   .burns-sign {
-    position: relative;
-    margin-top: 40px;
-    left:0px;
+    position: relative !important;
+    margin-top: -40px !important;
+    left:0px !important;
+  }
+  .next-one {
+    margin: 0% !important;
   }
 
   .random-message {

@@ -12,7 +12,7 @@ describe('Application', () => {
     assert.equal(wrapper.type(), 'BrowserRouter');
   });
 
-  it('renders a BrowserRouter', () => {
+  it.skip('renders a BrowserRouter', () => {
     const wrapper = shallow(<Application />);
     expect(wrapper.find('BrowserRouter')).to.have.length(1);
   });
@@ -32,15 +32,9 @@ describe('Application', () => {
     expect(wrapper.find('Match')).to.have.length(3);
   });
 
-  it('renders a footer component', () => {
-    const wrapper = shallow(<Application />);
-    expect(wrapper.find('Footer')).to.have.length(1);
-  });
-
   it('calls componentDidMount', () => {
     sinon.spy(Application.prototype, 'componentDidMount');
     const wrapper = mount(<Application />);
     expect(Application.prototype.componentDidMount.calledOnce).to.equal(true);
   });
-
 });
