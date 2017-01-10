@@ -15,8 +15,13 @@ h2 {
   display: inline-block;
 }
 
-.login-pic-text, .information-pic-text, .moneystack-pic-text, .random-message, .instruction-acc-setup {
+.login-pic-text, .information-pic-text, .moneystack-pic-text, .random-message, .instruction-acc-setup, th, .broken-pie-message {
   font-family: $nicefont;
+}
+
+th, .remaining-budget {
+  font-size: 28px;
+  margin-bottom: 15px;
 }
 
 .random-message {
