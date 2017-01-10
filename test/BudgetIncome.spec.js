@@ -28,16 +28,17 @@ describe('BudgetIncome', () => {
   })
 
   it.skip('updates the draftMonthly as the user types', () => {
-    const updateMonthly = sinon.spy();
-    const wrapper = shallow(<BudgetIncome onChange={updateMonthly}/>);
-    const inputField = wrapper.find('input');
+    const onChange = sinon.spy();
+    const wrapper = shallow(<BudgetIncome onChange={onChange}/>);
+    const inputWrapper = wrapper.find('input');
     const event1 = { target: { value: 14 } };
     const event2 = { target: { value: 14000 } };
-    assert.equal(updateMonthly.calledOnce, false);
-    inputField.simulate('change', event1);
-    assert.equal(updateMonthly.calledOnce, true);
-    inputField.simulate('change', event2);
-    assert.equal(updateMonthly.calledTwice, true);
+    inputWrapper.simulate('change')
+  //  expect(onChange.called).to.be.true
+    assert.equal(onChange.calledOnce, true);
+    inputWrapper.simulate('change', event2);
+    assert.equal(onChange.calledTwice, true);
   });
+
 
 });

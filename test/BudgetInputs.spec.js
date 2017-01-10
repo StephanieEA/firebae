@@ -28,17 +28,17 @@ describe('BudgetInputs', () => {
     expect(input.props().placeholder).to.equal('$800');
   })
 
-  // it('updates the budgetItem', () => {
-  //   const updateItem = sinon.spy();
-  //   const wrapper = shallow(<BudgetInputs onChange={updateItem}/>);
-  //   const inputField = wrapper.find('input').first();
-  //   const event1 = { target: { value: 'dogs' } };
-  //   const event2 = { target: { value: 'frogs' } };
-  //   assert.equal(updateItem.calledOnce, false);
-  //   inputField.simulate('change', event1);
-  //   assert.equal(updateItem.calledOnce, true);
-  //   inputField.simulate('change', event2);
-  //   assert.equal(updateItem.calledTwice, true);
-  // });
+  it.skip('updates the budgetItem', () => {
+    const onChange = sinon.spy();
+    const wrapper = shallow(<BudgetInputs onChange={onChange}/>);
+    const inputField = wrapper.find('input').first();
+    const event1 = { target: { value: 'dogs' } };
+    const event2 = { target: { value: 'frogs' } };
+    assert.equal(onChange.calledOnce, false);
+    inputField.simulate('change');
+    assert.equal(onChange.calledOnce, true);
+    inputField.simulate('change', event2);
+    assert.equal(onChange.calledTwice, true);
+  });
 
 });
