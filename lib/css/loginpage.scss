@@ -24,7 +24,7 @@ h2 {
 }
 
 .login-btn {
-  @include button($backgroundColor, $backgroundColorHover);
+  @include button($backgroundColor, $textImageColor, $backgroundColorHover);
 }
 
 .splash {
