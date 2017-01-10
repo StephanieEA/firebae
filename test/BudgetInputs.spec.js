@@ -11,9 +11,9 @@ describe('BudgetInputs', () => {
     assert.equal(wrapper.type(), 'tr');
   });
 
-  it('has a 3 td children', () => {
+  it('has a 2 td children', () => {
     const wrapper = shallow(<BudgetInputs />);
-    expect(wrapper.find('td')).to.have.length(3);
+    expect(wrapper.find('td')).to.have.length(2);
   })
 
   it('has a td input with a placeholder rent', () => {
@@ -28,17 +28,16 @@ describe('BudgetInputs', () => {
     expect(input.props().placeholder).to.equal('$800');
   })
 
-  // it('updates the budgetItem', () => {
-  //   const updateItem = sinon.spy();
-  //   const wrapper = shallow(<BudgetInputs onChange={updateItem}/>);
-  //   const inputField = wrapper.find('input').first();
-  //   const event1 = { target: { value: 'dogs' } };
-  //   const event2 = { target: { value: 'frogs' } };
-  //   assert.equal(updateItem.calledOnce, false);
-  //   inputField.simulate('change', event1);
-  //   assert.equal(updateItem.calledOnce, true);
-  //   inputField.simulate('change', event2);
-  //   assert.equal(updateItem.calledTwice, true);
-  // });
-
+  it.skip('updates the budgetItem', () => {
+    const updateItem = sinon.spy();
+    const wrapper = shallow(<BudgetInputs onChange={updateItem}/>);
+    const inputField = wrapper.find('input').first();
+    const event1 = { target: { value: 'dogs' } };
+    const event2 = { target: { value: 'frogs' } };
+    assert.equal(updateItem.calledOnce, false);
+    inputField.simulate('change', event1);
+    assert.equal(updateItem.calledOnce, true);
+    inputField.simulate('change', event2);
+    assert.equal(updateItem.calledTwice, true);
+  });
 });

@@ -39,5 +39,4 @@ describe('BudgetIncome', () => {
     inputField.simulate('change', event2);
     assert.equal(updateMonthly.calledTwice, true);
   });
-
 });
