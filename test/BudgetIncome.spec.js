@@ -27,14 +27,13 @@ describe('BudgetIncome', () => {
     expect(input.props().type).to.equal('number');
   })
 
-  it.skip('updates the draftMonthly as the user types', () => {
+  it('updates the draftMonthly as the user types', () => {
     const onChange = sinon.spy();
-    const wrapper = shallow(<BudgetIncome onChange={onChange}/>);
+    const wrapper = shallow(<BudgetIncome updateMonthly={onChange}/>);
     const inputWrapper = wrapper.find('input');
     const event1 = { target: { value: 14 } };
     const event2 = { target: { value: 14000 } };
-    inputWrapper.simulate('change')
-  //  expect(onChange.called).to.be.true
+    inputWrapper.simulate('change', event1)
     assert.equal(onChange.calledOnce, true);
     inputWrapper.simulate('change', event2);
     assert.equal(onChange.calledTwice, true);

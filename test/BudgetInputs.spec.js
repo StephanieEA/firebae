@@ -28,20 +28,31 @@ describe('BudgetInputs', () => {
     expect(input.props().placeholder).to.equal('$800');
   })
 
-  it.skip('updates the budgetItem', () => {
+  it('updates the budgetItem', () => {
     const onChange = sinon.spy();
     const fakeValue = 'fakeValue'
-    const wrapper = shallow(<BudgetInputs onChange={onChange} value={fakeValue}/>);
+    const wrapper = shallow(<BudgetInputs updateItem={onChange} />);
     const itemField = wrapper.find('.tdInput').first();
     const event1 = { target: { value: 'dogs' } };
     const event2 = { target: { value: 'frogs' } };
-    expect(itemField.props().value).to.equal('budgetItem')
     assert.equal(onChange.calledOnce, false);
-    inputField.simulate('change');
+    itemField.simulate('change', event1);
     assert.equal(onChange.calledOnce, true);
-    inputField.simulate('change', event2);
+    itemField.simulate('change', event2);
     assert.equal(onChange.calledTwice, true);
   });
 
-
+  it('updates the item value', () => {
+    const onChange = sinon.spy();
+    const fakeValue = 'fakeValue'
+    const wrapper = shallow(<BudgetInputs updateValue={onChange} />);
+    const valueField = wrapper.find('.tdInput').at(1);
+    const event1 = { target: { value: '800' } };
+    const event2 = { target: { value: '10' } };
+    assert.equal(onChange.calledOnce, false);
+    valueField.simulate('change', event1);
+    assert.equal(onChange.calledOnce, true);
+    valueField.simulate('change', event2);
+    assert.equal(onChange.calledTwice, true);
+  });
 });

@@ -7,11 +7,6 @@ import sinon from 'sinon';
 import Application from '../lib/components/Application';
 
 describe('Application', () => {
-  it.skip('should be titled "excellent budgeting"', () => {
-    const wrapper = shallow(<Application />);
-    assert.equal(wrapper.type(), 'BrowserRouter');
-  });
-
   it('renders an Application', () => {
     const wrapper = mount(<Application />);
     expect(wrapper.find('Application')).to.have.length(1);
