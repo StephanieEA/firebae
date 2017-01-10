@@ -14,7 +14,7 @@ describe('Button', () => {
   it('has className and onClick properties', () => {
     const fakeName = 'fakeName'
     const fakeClick = 'fakeClick'
-    const wrapper = shallow (<Button className={fakeName} onClick={fakeClick}/>)
+    const wrapper = shallow(<Button className={fakeName} onClick={fakeClick}/>)
     const buttonWrapper = wrapper.find('button')
     expect(buttonWrapper.props().className).to.equal('fakeName')
     expect(buttonWrapper.props().onClick).to.equal('fakeClick')
@@ -22,7 +22,7 @@ describe('Button', () => {
 
   it('renders text correctly', () => {
     const fakeText = 'Submit'
-    const wrapper = shallow(<Button  text={fakeText}/>)
+    const wrapper = shallow(<Button text={fakeText}/>)
     const buttonText = wrapper.find('button').text()
     expect(buttonText).to.equal('Submit')
   });
