@@ -30,10 +30,12 @@ describe('BudgetInputs', () => {
 
   it.skip('updates the budgetItem', () => {
     const onChange = sinon.spy();
-    const wrapper = shallow(<BudgetInputs onChange={onChange}/>);
-    const inputField = wrapper.find('input').first();
+    const fakeValue = 'fakeValue'
+    const wrapper = shallow(<BudgetInputs onChange={onChange} value={fakeValue}/>);
+    const itemField = wrapper.find('.tdInput').first();
     const event1 = { target: { value: 'dogs' } };
     const event2 = { target: { value: 'frogs' } };
+    expect(itemField.props().value).to.equal('budgetItem')
     assert.equal(onChange.calledOnce, false);
     inputField.simulate('change');
     assert.equal(onChange.calledOnce, true);
