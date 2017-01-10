@@ -53,4 +53,20 @@ describe('RightSide', () => {
     expect(remainingBudget).to.equal('REMAINING BUDGET: $4700');
   });
 
+  it('should render a PieChart component', () => {
+    const fakeArray = [{ budgetItem: 'dogfood', firebaseId: '-Ka6IY_N1JYoFGp-QVwK', itemTime: "01/10, 12:35 am", itemValue: "20" }];
+    const fakeIncome = [{ firebaseId: "-Ka6IY_SQphMgLowu7eI", key: 0, monthlyIncome: "5000" }]
+    const wrapper = shallow(<RightSide loadArray={fakeArray} monthlyIncome={fakeIncome}/>)
+    expect(wrapper.find('PieChart')).to.have.length(1);
+  });
+
+  it('should render the pie chart with correct values', () => {
+    const fakeArray = [{ uid: '3452452543', budgetItem: 'dogfood', itemValue: 300, itemTime: "01/10, 12:35 am" }];
+    const fakeIncome = [{ firebaseId: "-Ka6IY_SQphMgLowu7eI", key: 0, monthlyIncome: "5000" }]
+    const wrapper = shallow(<RightSide loadArray={fakeArray} monthlyIncome={fakeIncome}/>)
+    const pieSlices = wrapper.find('PieChart').props().slices;
+    expect(pieSlices[0]).to.deep.equal({ color: '#f00', value: 300 });      expect(pieSlices[1]).to.deep.equal({ color: '#0f0', value: 5000 });
+  });
+
+
 });
