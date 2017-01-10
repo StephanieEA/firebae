@@ -5,8 +5,6 @@ import { assert, expect } from 'chai';
 import sinon from 'sinon';
 
 import AccountSetup from '../lib/components/AccountSetup';
-import Button from '../lib/components/Button';
-
 
 describe('AccountSetup', () => {
   it('renders as a <section>', () => {
@@ -40,4 +38,12 @@ describe('AccountSetup', () => {
     expect(submitButton.props().text).to.equal('Submit');
   });
 
+  it('submit button click should call the method submission', () => {
+    const submission = sinon.spy()
+    const wrapper = shallow(<AccountSetup submission={submission}/>)
+    const submitButton = wrapper.find('.submit-btn');
+    assert.equal(submission.calledOnce, false);
+    submitButton.simulate('click');
+    expect(submission).to.have.property('callCount', 1)
+  });
 });
