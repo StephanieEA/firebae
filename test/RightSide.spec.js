@@ -67,7 +67,7 @@ describe('RightSide', () => {
     const fakeIncome = [{ firebaseId: "-Ka6IY_SQphMgLowu7eI", key: 0, monthlyIncome: "5000" }]
     const wrapper = shallow(<RightSide loadArray={fakeArray} monthlyIncome={fakeIncome}/>)
     const pieSlices = wrapper.find('PieChart').props().slices;
-    expect(pieSlices[0]).to.deep.equal({ color: '#f00', value: 300 });      expect(pieSlices[1]).to.deep.equal({ color: '#0f0', value: 5000 });
+    expect(pieSlices[0]).to.deep.equal({ color: '#AD0909', value: 300 });      expect(pieSlices[1]).to.deep.equal({ color: '#7BD8B0', value: 4700 });
   });
 
 

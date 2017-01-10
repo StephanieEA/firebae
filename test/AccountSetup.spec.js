@@ -5,8 +5,6 @@ import { assert, expect } from 'chai';
 import sinon from 'sinon';
 
 import AccountSetup from '../lib/components/AccountSetup';
-import Button from '../lib/components/Button';
-
 
 describe('AccountSetup', () => {
   it('renders as a <section>', () => {
