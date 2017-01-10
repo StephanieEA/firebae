@@ -10,6 +10,7 @@ describe('Login', () => {
     const wrapper = shallow(<Login user={false}/>)
     assert.equal(wrapper.type(), 'div');
   });
+
   it('should render a login button if user not logged in', () => {
     const wrapper = mount(<Login user={false}/>)
     const loginbutton = wrapper.find('button')
