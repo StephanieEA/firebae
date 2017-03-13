@@ -7,9 +7,12 @@
     "test": "test"
   },
   "scripts": {
-    "start": "webpack-dev-server --devtool",
-    "build": "npm run lint; npm test; webpack",
-    "test": "mocha --compilers js:babel-register --require test/helpers/setup.js --recursive"
+    "start": "./node_modules/webpack-dev-server/bin/webpack-dev-server.js  --hot --inline",
+    "webpack": "./node_modules/webpack/bin/webpack.js",
+    "test": "jest || true",
+    "lint": "./node_modules/eslint/bin/eslint.js  --ext .js --ext .jsx lib/** __tests__** || true",
+    "build": "npm run lint; npm test; npm run webpack",
+    "deploy": "firebase deploy"
   },
   "repository": {
     "type": "git",
